@@ -1,4 +1,5 @@
 import express from "express";
+//import { addValidatorToGradesCollection } from "./addvalidator.mjs";
 
 const PORT = 5050;
 const app = express();
@@ -11,6 +12,10 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Welcome to the API.");
 });
+
+// Add validator
+//addValidatorToGradesCollection();
+// I don't know why this doesn't work
 
 app.use("/grades", grades);
 app.use("/grades", grades_agg);

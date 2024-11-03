@@ -1,4 +1,5 @@
 import { MongoClient } from "mongodb";
+import "dotenv/config";
 
 const client = new MongoClient(process.env.ATLAS_URI);
 
